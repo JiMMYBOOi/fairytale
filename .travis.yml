@@ -6,10 +6,17 @@ compiler:
 - gcc
 os:
 - linux
+- osx
+
+matrix:
+  exclude:
+    - os: osx
+      compiler: gcc
+
 before_install:
 - echo $LANG
 - echo $LC_ALL
 
 script:
-- make
-
+- if [ $TRAVIS_OS_NAME == linux ]; then make; fi
+- if [ $TRAVIS_OS_NAME == osx ]; then make; fi
