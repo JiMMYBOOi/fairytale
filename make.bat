@@ -36,8 +36,7 @@ set PARSERSCPP=parsers\ddsparser.cpp parsers\modparser.cpp parsers\textparser.cp
 set TRANSFORMSCPP=transforms\zlibtransform.cpp
 set MAINCPP=analyser.cpp block.cpp deduper.cpp filestream.cpp hybridstream.cpp storagemanager.cpp
 
-%GPP% %MPARAM% %DBIT% -O2 -std=c++11 -fomit-frame-pointer -s -static -static-libgcc -static-libstdc++ -Wall %TRANSFORMSCPP% %PARSERSCPP% %MAINCPP% -lz fairytale.cpp -ofairytale.exe  > test.txt
-type test.txt
+%GPP% %MPARAM% %DBIT% -O2 -std=c++11 -fomit-frame-pointer -s -static -static-libgcc -static-libstdc++ -Wall %TRANSFORMSCPP% %PARSERSCPP% %MAINCPP% -lz fairytale.cpp -ofairytale.exe
 
 if not %ERRORLEVEL% == 0 echo ERROR!!!
 if %ERRORLEVEL% == 0 echo.
