@@ -6,7 +6,8 @@ REM "make 32" for a 32-bit compile
 
 REM g++ 32-bit/64-bit commands - change them according to your environment
 set GPP32=g++
-set GPP64=C:\MinGW\bin\x86_64-w64-mingw32-g++
+set GPP64=C:\mingw-w64\x86_64-6.3.0-posix-seh-rt_v5-rev1\bin\g++
+
 
 set GCC=%GCC64%
 set GPP=%GPP64%
