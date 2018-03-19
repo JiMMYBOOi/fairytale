@@ -1,4 +1,4 @@
-@echo off
+REM @echo off
 
 REM Usage:
 REM "make" for a 64-bit compile
