@@ -19,7 +19,6 @@ if "%1"=="32" (
 if "%1"=="appveyor" (
   set GPP=C:\MinGW\bin\g++
   set GPP32=C:\MinGW\bin\g++
-  cd C:\projects\fairytale
 )
 SHIFT
 goto parse
