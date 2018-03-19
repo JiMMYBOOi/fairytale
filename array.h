@@ -23,6 +23,7 @@
 // Template Array class from paq8px, slightly modified, see https://github.com/hxim/paq8px
 
 #include "common.h"
+#include <new> // clang needs this
 
 template <class T, const int Align=16> class Array {
 private:
