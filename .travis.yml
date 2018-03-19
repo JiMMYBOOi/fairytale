@@ -11,5 +11,5 @@ before_install:
 - echo $LANG
 - echo $LC_ALL
 script:
-- if [ $TRAVIS_OS_NAME == linux ]; then make
-- if [ $TRAVIS_OS_NAME == osx ]; then make
+- if [ $TRAVIS_OS_NAME == linux ]; then make; fi
+- if [ $TRAVIS_OS_NAME == osx ]; then make; fi
