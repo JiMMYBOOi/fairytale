@@ -2,7 +2,7 @@ language: cpp
 sudo: required
 dist: trusty
 compiler:
-- clang
+# - clang # doesn't work yet; chokes on std::bad_alloc, see https://travis-ci.org/schnaader/fairytale/jobs/355305072
 - gcc
 os:
 - linux
