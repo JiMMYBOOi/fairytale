@@ -7,7 +7,6 @@ compiler:
 os:
 - linux
 - osx
-osx_image: xcode8
 before_install:
 - echo $LANG
 - echo $LC_ALL
