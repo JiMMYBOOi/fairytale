@@ -7,14 +7,16 @@ compiler:
 os:
 - linux
 - osx
+osx_image: xcode8
 before_install:
 - echo $LANG
 - echo $LC_ALL
 
-script:
+before_install
 # this is needed to make osx use gcc instead of clang
-- if [ "$TRAVIS_OS_NAME" = "osx" ] && [ "$CC" = "gcc" ]; then export CXX=g++-4.8; fi
+- if [ $TRAVIS_OS_NAME = osx ]; then export CXX=g++-4.9; fi
 
+script:
 - if [ $TRAVIS_OS_NAME == linux ]; then make; fi
 - if [ $TRAVIS_OS_NAME == osx ]; then make; fi
 
