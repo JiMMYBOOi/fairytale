@@ -2,7 +2,7 @@ language: cpp
 sudo: required
 dist: trusty
 compiler:
-# - clang # doesn't work yet; chokes on std::bad_alloc, see https://travis-ci.org/schnaader/fairytale/jobs/355305072
+- clang
 - gcc
 os:
 - linux
@@ -10,6 +10,11 @@ os:
 before_install:
 - echo $LANG
 - echo $LC_ALL
+
 script:
+# this is needed to make osx use gcc instead of clang
+- if [ "$TRAVIS_OS_NAME" = "osx" ] && [ "$CC" = "gcc" ]; then export CC=gcc-4.8; fi
+
 - if [ $TRAVIS_OS_NAME == linux ]; then make; fi
 - if [ $TRAVIS_OS_NAME == osx ]; then make; fi
+
