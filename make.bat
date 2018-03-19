@@ -5,9 +5,8 @@ REM "make" for a 64-bit compile
 REM "make 32" for a 32-bit compile
 
 REM g++ 32-bit/64-bit commands - change them according to your environment
-set GPP32=C:\MinGW\bin\g++
-set GPP64=x86_64-w64-mingw32-g++
-
+set GPP32=g++
+set GPP64=C:\MinGW\bin\x86_64-w64-mingw32-g++
 
 set GCC=%GCC64%
 set GPP=%GPP64%
@@ -18,6 +17,8 @@ if "%1"=="32" (
   set GPP=%GPP32%
 )
 :endparse
+
+%GPP% --version
 
 set PARSERSCPP=parsers\ddsparser.cpp parsers\modparser.cpp parsers\textparser.cpp
 set TRANSFORMSCPP=transforms\zlibtransform.cpp
